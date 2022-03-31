@@ -9,7 +9,7 @@ var options = ["R", "P", "S"];
 //function that starts the game
 var playGame = function() {
     // collect user choice
-    var userChoice = prompt("Rock, Paper, or Scissors", "Enter R, P, or S");
+    var userChoice = prompt("Rock, Paper, or Scissors?", "Enter R, P, or S");
     //if user cancels, end function
     if (!userChoice) {
         return;
