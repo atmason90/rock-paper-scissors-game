@@ -54,6 +54,7 @@ if (playagain) {
 }
 };
 
+//start the game
 playGame();
 
 
