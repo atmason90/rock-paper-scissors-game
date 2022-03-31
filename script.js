@@ -15,43 +15,43 @@ var playGame = function() {
         return;
     }
 
-//convert user choice to upper case for easy comparison
-userChoice = userChoice.toUpperCase();
+    //convert user choice to upper case for easy comparison
+    userChoice = userChoice.toUpperCase();
 
-//generate random computer choice
-var index = Math.floor(Math.random() * options.length);
-var computerChoice = options[index];
+    //generate random computer choice
+    var index = Math.floor(Math.random() * options.length);
+    var computerChoice = options[index];
 
-alert("The computer chose " + computerChoice);
+    alert("The computer chose " + computerChoice);
 
-//same choices = tie
-if (userChoice === computerChoice) {
+    //same choices = tie
+    if (userChoice === computerChoice) {
     ties++;
     alert("It's a tie!");
 
-//win conditions for user
-} else if (
-    (userChoice === "R" && computerChoice === "S") ||
-    (userChoice === "P" && computerChoice === "R") ||
-    (userChoice === "S" && computerChoice === "P")
-) {
-    wins++;
-    window.alert("You win!");
+    //win conditions for user
+    } else if (
+        (userChoice === "R" && computerChoice === "S") ||
+        (userChoice === "P" && computerChoice === "R") ||
+        (userChoice === "S" && computerChoice === "P")
+    ) {
+        wins++;
+        window.alert("You win!");
 
-//if none of the above, player loses
-} else {
-    losses++;
-    window.alert("You lost!");
-}
+    //if none of the above, player loses
+    } else {
+        losses++;
+        window.alert("You lost!");
+    }
 
-//game stats
-window.alert("Stats:\nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties);
+    //game stats
+    window.alert("Stats:\nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties);
 
-//ask user to play again
-var playagain = window.confirm("Play again?");
-if (playagain) {
-    playGame();
-}
+    //ask user to play again
+    var playagain = window.confirm("Play again?");
+    if (playagain) {
+        playGame();
+    }
 };
 
 //start the game
